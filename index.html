@@ -126,10 +126,12 @@ body {
 
          /*SERVICES*/ 
          .services {
-                  display: grid;
-                  grid-template-coloumns: repeat(3, 270px);
+                  display:flex;
+                  flex-direction: row;
                   justify-content: center;
+                  align items: stretch;
                   gap: 25px;
+                  flex-wrap: nowrap
          }
 
          .service-card {
@@ -368,10 +370,10 @@ body {
         <div class="service-card">
             <span class="service-number">03</span>
             <h3>Signature Nail Art</h3>
-            <p>Delicate details and custom designs created to complement your style.</p>
+            <p> 
+                    Delicate details and custom designs created to complement your style.
+            </p>
         </div>
-
-    </div>
 
 </section>
 
