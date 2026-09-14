@@ -184,7 +184,21 @@ body {
                   color: #8b5e5a;
                   fonty-family: Georgia, serif;
                   font-size: 20px;
+                 overflow: hidden;
+                 position: relative;
          }
+           .gallery-box img {
+                   width: 100%;
+                   height: 100%;
+                   object-fit: cover;
+                   display: block;
+                   transition: 0.4s;
+           }
+
+           .gallery-box:hover img {
+                   transform: scale(1.05);
+           }
+        
 
          .gallery-box:nth-child(2) {
                   background-color: #eaded9;
@@ -407,16 +421,16 @@ body {
         <div class="gallery-grid">
 
 <div class="gallery-box">
-         French
+<img src="french.webp" alt="French tip nails">
 </div>
 <div class="gallery-box">
-         Chrome
+     <img src="chrome.webp" alt="Chrome nails">
 </div>
 <div class="gallery-box">
-         Floral
+     <img src="floral.webp" alt="Floral nails">
 </div>
 <div class="gallery-box">
-         Glazed
+     <img src="glazed.webp" alt="Glazed nails">
 </div>
 </div>
 </section>
