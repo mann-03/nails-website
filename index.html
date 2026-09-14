@@ -1,12 +1,504 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Miss Mann Nail Studio</title>
+<style>
+         * { 
+                  box-sizing: border-box;
+                  margin:0;
+                  padding:0;
+         }
+body {
+         font-family: Arial, sans-serif;
+         background-color: #faf7f5;
+         color: #292524;
+         line-height: 1.6;
+}
+         /* NAVIGATION */
+         nav {
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  padding: 22px 8%;
+                  background-color: #faf7f5;
+                  position: sticky;
+                  top: 0;
+                  z-index: 10;
+                  border-bottom: 1px solid #eee5e1;
+         }
+
+         .logo {
+                  font-size: 24px;
+                  letter-spacing: 2px;
+                  font-weight: bold;
+                  color: #8b5e5a;
+         }
+
+         nav a {
+                  text-decoration: none;
+                  color: #4b4543;
+                  margin-left: 30px;
+                  font-size: 14px;
+         }
+
+         nav a:hover {
+                  color: #a66f69;
+         }
+
+         /* HERO */
+         .hero {
+                  min-height: 85vh;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  text-align: center;
+                  padding: 80px 20px:
+                  background-color: #f3e7e4;
+         }
+
+         .hero-content {
+                  max-width: 750px;
+         }
+
+         .small-title {
+                  text-transform: uppercase;
+                  letter-spacing: 4px;
+                  font-size: 12px;
+                  color: #8b5e5a;
+                  margin-bottom: 20px;
+         }
+
+         h1 {
+                  font-family: Georgia, serif;
+                  font-size: 72px;
+                  font-weight: normal;
+                  color: #3b3230;
+                  line-height: 1.05;
+         }
+
+         .hero p {
+                  max-width: 550px;
+                  margin: 25px auto;
+                  color: #665e5b;
+                  font-size: 17px;
+         }
+
+         .button {
+                  display: inline-block;
+                  padding: 14px 32px;
+                  background-color: #8b5e5a;
+                  color: white;
+                  text-decoration: none;
+                  font-size: 13px;
+                  letter-spacing: 1px;
+                  margin-top: 10px;
+                  transition: 0.3s;
+         }
+
+         .button:hover {
+                  background-color: #684542;
+                  transform: translateY(-2px);
+         }
+
+         /* SECTIONS */
+         section {
+              padding: 90px 8%;
+         }
+
+         .section-heading {
+                  text-align: center;
+                  margin-bottom: 50px;
+         }
+
+         .section-heading h2 {
+                  font-family: Georgia, serif;
+                  font-size: 42px;
+                  font-weight: normal;
+                  color: #3b3230;
+         }
+
+         .section-heading p {
+                  color: #77706d;
+                  margin-top: 10px:
+         }
+
+         /*SERVICES*/ 
+         .services {
+                  display: flex;
+                  justify-content: center;
+                  gap: 25px;
+                  flex-wrap: wrap;
+         }
+
+         .service-card {
+                  background-color: white;
+                  padding: 35px 28px;
+                  width: 270px;
+                  border: 1px solid #eee5e1;
+                  transition: 0.3s;
+         }
+
+         .service-card: hover {
+                  transform: translateY(-8px);
+                  Box-shadow: 0 15px 35px 3ddd2ce;
+         }
+
+         .service-number {
+                  font-size: 13px;
+                  color: #a66f69;
+                  letter-spacing: 2px;
+         }
+
+         .service-card h3 {
+                  font-family: Georgia, serif;
+                  font-size: 24px;
+                  font-weight: normal;
+                  margin: 15px 0 10px;
+         }
+
+         .service-card p {
+                  color: #77706d;
+                  font-size: 14px;
+         }
+
+         /* GALLERY */
+         .gallery {
+                  background-color: #f3e7e4;
+         }
+
+         .gallery-grid {
+                  display: flex;
+                  justify-content: center;
+                  gap: 18px;
+                  flex-wrap: wrap;
+         }
+
+         .gallery-box {
+                  width: 220px;
+                  height: 280px;
+                  background-color: #dfcfca;
+                  display: flex;
+                  align-items: center;
+                  color: #8b5e5a;
+                  fonty-family: Georgia, serif;
+                  font-size: 20px;
+         }
+
+         .gallery-box:nth-child(2) {
+                  background-color: #eaded9;
+         }
+
+         .gallery-box:nth-child(3) {
+                  background-color: #d8c5c0;
+         }
+
+         .gallery-box:nth-child(4) {
+                  background-color: #eee2de;
+         }
+
+         /* ABOUT */ 
+         .about {
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 80px;
+                  flex-wrap: wrap;
+         }
+
+         .about-box {
+                  max-width: 500px;
+         }
+
+         .about-box h2 {
+                  font-family: Georgia, swerif;
+                  font-size: 45px;
+                  font-weight: normal;
+                  margin-bottom: 20px;
+         }
+
+         .about-box p {
+                  color: #6f6865;
+                  margin-bottom: 15px;
+         }
+
+         .about-symbol {
+                  width: 260px;
+                  height: 260px;
+                  border: 1px solid #b99a93;
+                  border-radius: 50%;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  font-family: Georgia, serif;
+                  font-size: 60px;
+                  color: #8b5e5a;
+         }
+
+         /* TESTIMONIAL */ 
+         .testimonial {
+                  text-align: center;
+                  background-color: #3b3230;
+                  color: white;
+         }
+
+         .testimonial p {
+                  max-width: 650px;
+                  margin: auto;
+                  font-family: Georgia, serif;
+                  font-size: 25px;
+                  font-style: italic;
+         }
+
+         /* BOOKING */ 
+         .booking {
+                  text-align: center;
+         }
+
+         .booking h2 {
+                  font-family: Georgia, serif;
+                  font-size: 45px;
+                  font-weight: normal;
+         }
+
+         .booking p {
+                  color: #77706d;
+                  margin: 15px auto 25px;
+                  max-width: 500px;
+         }
+
+         /* FOOTER */ 
+         footer {
+                  background-color: #f3e7e4;
+                  text-align: center;
+                  padding: 30px;
+                  color: #766b68;
+                  font-size: 13px;
+         }
+
+         /* MOBILE */ 
+         @media (max-width: 700px) {
+                  nav {
+                           flex-direction: column;
+                           gap: 15px;
+                  }
+                  nav a {
+                           margin: 0 8px;
+                  }
+                  h1 {
+                           font-size: 48px;
+                  }
+                  .hero {
+                           min-height: 75vh;
+                  }
+                  .about {
+                           text-align: center;
+                  }
+         }
+</style> 
+</head>
+<body>
+<!--NAVIGATION-->
+         <nav>
+                  <div class="logo">
+                   MISS MANN
+                  </div>
+                  <div>
+                           <a href="#home">Home</a>
+                           <a href="#services">Services</a>
+                           <a href="#gallery">Gallery</a>
+                           <a href="#about">About</a>
+                           <a href="#booking">Book</a>        
+                   </div>
+ </nav>
+
+ <!--HERO-->
+ <section class="hero' id="home'>
+          <div class="hero-content'>
+                   <div class="small-title'>
+                    Nail Studio . Chandigarh
+          </div>
+          </h1> 
+               Your nails,<br>
+               beautifully refined.
+         </h1>
+          </p>
+              Thoughtfully designed nail experiences
+              for those who love the little details.
+          </p>
+          <a href="#booking" class="button">
+                   BOOK AN APPOINTMENT
+          </a>
+  </div>
+ </section>
+
+<!--SERVICES-->
+<section id="services'>
+         <div class="section-heading'>
+         <div class="small-title'>
+                  What we offer
+         </div>
+         <h2>
+                  Signature Services
+                  </h2>
+                  <p>
+                     Simple. Elegant. Made for you.
+                  </p>
+         </div>
+         <div class="service-card'>
+                  <div class="service-number'>
+                           02
+          </div>
+          <h3>
+               Gel Extensions
+          </h3>
+         <p>
+                           Elegant length and shape with
+                           a smooth, glossy finish.
+               </p>
+         </div>
+
+         <div class="service-card'>
+                           <div class="service-number'>
+                                    03
+                                    </div>
+                                    <h3>
+                                        Nail Art
+                                    </h3>
+                                    <p> 
+                                       From delicate details to statement
+                                       designs, created around your style.
+                           </p>
+                  </div>
+          </div>
+ </section>
+
+<!--GALLERY-->
+<section class="gallery" id="gallery'>
+         <div class="section-heading'>
+                  <div class="small-title'>
+                  Our work
+         </div>
+         </h2>
+                  The Nail Edit
+          </h2>
+</div>
+
+<div class="gallery-box">
+         French
+</div>
+<div class="gallery-box">
+         Chrome
+</div>
+<div class="gallery-box">
+         Floral
+</div>
+<div class="gallery-box">
+         Glazed
+</div>
+</div>
+</section>
+
+<!--ABOUT-->
+<section class="about" id='about">
+         <div class="about-symbol">
+         M
+</div>
+<div class="about-box">
+         <div class="small-title'>
+         Our philosophy
+</div>
+<h2>
+         Beauty in the details.
+</h2>
+<p> 
+         Miss Mann is a fictional nail studio created for our little web-design experiment.
+</p>
+<p>
+         The idea is simple- create a calm, 
+         beautiful space where every detail feels
+         intentional.
+</p>
+</div>
+</section>
+ <!--TESTIMONIAL-->
+<section class='testimonial'>
+         <p>
+                  'Sometimes the smallest details
+                  make the biggest difference."
+         </p>
+         <span>
+                  - MISS MANN
+         </span>
+</section>
+<!--BOOKING-->
+         <section class="booking"id='booking">
+                  <div class="small-title">
+                     Your next set awaits
+                  </div>
+                  <h2>
+                      Let's create something beautiful.
+                  </h2>
+                  <p> 
+                           Choose your favourite style and imagine
+                           your perfect nail appointment.
+                  </p>
+                  <a href="#home" class="button'>
+                           BOOK YOUR SET
+                           </a>
+                           </section>
+<!--FOOTER-->
+<footer>
+                           MISS MANN NAIL STUDIO
+                           <br><br>
+                           2026 . A frictional website experiment
+                           </footer>
+                           </body>
+                           </html>
+                           
+         
+         
+         
+         
+                           
+                                    
+                           
+                                    
+                           
+                           
+                           
+         
+                  
+                  
+          
+          
+         
+                  
+         
+                  
+                  
+         
+                  
+         
+         
+
+
+
+
+
+
+
+
+
+
+         
          <title>Nails by Me</title>
 <style>
         body  {
                 background-color:  #fff5f7;
                 font-family:  Arial,  sans-serif;
-                text-align:  center;
+                text-align:  center:
                padding:  40px;
         }
         h1 {
